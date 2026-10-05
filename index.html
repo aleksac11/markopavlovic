@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Marko Pavlović, personalni trener iz Ćuprije sa 15 godina iskustva. Personalni treninzi, online coaching, planovi ishrane i transformacioni programi.">
+<meta name="theme-color" content="#131518">
+<meta property="og:title" content="Marko Pavlović · Personalni trener">
+<meta property="og:description" content="Personalni treninzi, online coaching i planovi ishrane. Ćuprija.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23131518'/%3E%3Ctext x='32' y='44' font-family='Impact,Arial' font-size='32' text-anchor='middle' fill='%23ff5c1f'%3EMP%3C/text%3E%3C/svg%3E">
+<title>Marko Pavlović Coaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;1,500&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+/* Layout: athletic poster flow, condensed uppercase headlines, asymmetric splits, electric-orange rules as the only ornament. Deliberately single dark theme. */
+:root{
+  --ink:#131518;        /* page ground, graphite */
+  --ink-2:#1c1f23;      /* raised surface */
+  --ink-3:#262a2f;      /* placeholder fill */
+  --gold:#ff5c1f;       /* electric orange accent */
+  --gold-soft:#b9532c;  /* hairlines, muted orange */
+  --cream:#f2f3f4;      /* primary text */
+  --mute:#9ba1a8;       /* secondary text, cool grey */
+  --display:"Anton","Impact","Haettenschweiler","Arial Narrow Bold",sans-serif;
+  --cond:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"Barlow","Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--ink);color:var(--cream);font-family:var(--body);font-weight:400;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+
+/* language switch */
+.site[data-lang="sr"] [lang="en"],.site[data-lang="en"] [lang="sr"]{display:none!important}
+
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.eyebrow{font-family:var(--cond);font-size:14px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:400;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:36px;height:1px;background:var(--gold-soft)}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1;letter-spacing:.01em;text-transform:uppercase}
+h3{font-family:var(--cond);font-weight:700;letter-spacing:.02em}
+h2{font-size:clamp(40px,6vw,76px)}
+h2 em,h1 em{font-style:normal;color:var(--gold)}
+h3{font-size:clamp(24px,2.4vw,30px)}
+p{margin:0;max-width:62ch;color:var(--mute)}
+section{padding-block:clamp(80px,11vw,150px);border-top:1px solid rgba(255,92,31,.14)}
+.head{display:grid;gap:22px;margin-bottom:clamp(44px,6vw,72px)}
+
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:.16em;transform:skewX(-12deg);text-transform:uppercase;text-decoration:none;padding:18px 30px;border:1px solid var(--gold);color:var(--ink);background:var(--gold);cursor:pointer;transition:background .3s,color .3s}
+.btn>*{display:inline-block;transform:skewX(12deg)}
+.btn:hover{background:transparent;color:var(--gold)}
+.btn.ghost{background:transparent;color:var(--gold)}
+.btn.ghost:hover{background:var(--gold);color:var(--ink)}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(19,21,24,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,92,31,.14)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:74px}
+.mark{font-family:var(--display);font-size:24px;text-transform:uppercase;text-decoration:none;letter-spacing:.03em;white-space:nowrap}
+.mark span{color:var(--gold)}
+.links{display:flex;gap:30px;font-family:var(--cond);font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase}
+.links a{text-decoration:none;color:var(--mute);transition:color .2s}
+.links a:hover{color:var(--gold)}
+.lang{display:flex;border:1px solid var(--gold-soft)}
+.lang button{background:none;border:0;color:var(--mute);font:500 11px/1 var(--body);letter-spacing:.2em;padding:9px 12px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--ink)}
+@media (max-width:1060px){.links{gap:16px;font-size:13px;letter-spacing:.1em}}
+@media (max-width:760px){.links{display:none}}
+.navr{display:flex;align-items:center;gap:12px}
+.burger{display:none;width:44px;height:40px;background:none;border:1px solid var(--gold-soft);cursor:pointer;position:relative;padding:0}
+.burger i{position:absolute;left:11px;right:11px;height:2px;background:var(--cream);transition:transform .3s,opacity .2s,top .3s}
+.burger i:nth-child(1){top:12px}.burger i:nth-child(2){top:19px}.burger i:nth-child(3){top:26px}
+.burger[aria-expanded="true"] i:nth-child(1){top:19px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] i:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] i:nth-child(3){top:19px;transform:rotate(-45deg)}
+.mmenu{position:fixed;left:0;right:0;top:calc(74px + env(safe-area-inset-top,0px));bottom:0;z-index:19;background:var(--ink);padding:28px 16px calc(28px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:6px;overflow-y:auto}
+.mmenu a{font-family:var(--display);text-transform:uppercase;font-size:clamp(34px,10vw,48px);line-height:1.15;text-decoration:none;color:var(--cream);padding-block:10px;border-bottom:1px solid rgba(255,92,31,.18);display:flex;justify-content:space-between;align-items:center}
+.mmenu a::after{content:"→";font-family:var(--body);font-size:24px;color:var(--gold)}
+.mmenu a:hover,.mmenu a:focus-visible{color:var(--gold)}
+.mmenu .btn{margin-top:28px;justify-content:center;font-size:16px}
+.mmenu .btn::after{content:none}
+.mmenu .mfoot{margin-top:auto;padding-top:28px;display:grid;gap:20px;font-family:var(--cond);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:14px;color:var(--mute)}
+body.menu-open{overflow:hidden}
+@media (max-width:760px){.burger{display:block}}
+.mmenu a.btn{color:var(--ink)}
+@media (max-width:760px){nav .lang{display:none}.burger{border:0;width:44px;height:44px;margin-right:-10px}.burger i{left:10px;right:10px}.burger i:nth-child(1){top:14px}.burger i:nth-child(2),.burger[aria-expanded="true"] i:nth-child(1),.burger[aria-expanded="true"] i:nth-child(3){top:21px}.burger i:nth-child(3){top:28px}}
+.mlang{display:flex;gap:10px}
+.mlang button{flex:1;background:none;border:1px solid var(--gold-soft);color:var(--mute);font:600 15px var(--cond);letter-spacing:.16em;text-transform:uppercase;padding:14px 10px;cursor:pointer}
+.mlang button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+@media (min-width:761px){.mmenu{display:none!important}}
+
+/* photo placeholder */
+.ph{position:relative;background:
+  radial-gradient(120% 80% at 70% 20%,rgba(255,92,31,.16),transparent 60%),
+  linear-gradient(160deg,var(--ink-3),var(--ink-2));
+  border:1px solid rgba(255,92,31,.22);display:flex;align-items:flex-end;padding:18px;overflow:hidden;max-width:100%}
+.ph::after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,92,31,.12);pointer-events:none}
+.ph small{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-soft);position:relative}
+
+/* hero */
+.hero{padding-block:clamp(56px,8vw,110px) clamp(70px,9vw,120px);border-top:0}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,6vw,90px);align-items:end}
+.hero h1{font-size:clamp(64px,11vw,156px);line-height:.9;margin-block:28px 30px}
+.hero h1 .l2{display:block;padding-left:.6em}
+.hero p{font-size:19px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+.hero .ph{aspect-ratio:4/5}
+.sig{margin-top:48px;display:flex;flex-wrap:wrap;gap:12px 34px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
+.sig b{color:var(--cream);font-weight:400}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero .ph{aspect-ratio:4/3}}
+.fade{animation:rise 1.1s cubic-bezier(.2,.7,.2,1) both}
+.fade.d2{animation-delay:.15s}.fade.d3{animation-delay:.3s}
+@keyframes rise{from{transform:translateY(18px)}to{transform:none}}
+
+/* figures */
+.figs{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid rgba(255,92,31,.2)}
+.fig{padding:34px 24px;border-left:1px solid rgba(255,92,31,.2);display:grid;gap:6px}
+.fig:first-child{border-left:0}
+.fig strong{font-family:var(--display);font-weight:400;font-size:clamp(40px,4.4vw,58px);color:var(--gold);line-height:1;font-variant-numeric:lining-nums}
+.fig span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+@media (max-width:760px){.figs{grid-template-columns:1fr 1fr}.fig:nth-child(3){border-left:0}.fig:nth-child(n+3){border-top:1px solid rgba(255,92,31,.2)}}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,6vw,96px);align-items:start}
+.about .ph{aspect-ratio:3/4;position:sticky;top:110px}
+.about .txt{display:grid;gap:26px}
+.about .lead{font-family:var(--body);font-weight:500;font-size:clamp(21px,2.2vw,26px);line-height:1.45;color:var(--cream);max-width:30ch}
+.certs{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.certs li{padding:16px 0;border-bottom:1px solid rgba(255,92,31,.16);display:flex;gap:16px;font-size:15px;color:var(--cream)}
+.certs li i{font-style:normal;color:var(--gold);font-family:var(--display);min-width:44px;font-variant-numeric:tabular-nums}
+@media (max-width:860px){.about .wrap{grid-template-columns:1fr}.about .ph{position:relative;top:auto;aspect-ratio:4/3}.certs{grid-template-columns:1fr}}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid rgba(255,92,31,.2)}
+.svc article{padding:44px clamp(0px,3vw,44px) 44px 0;border-bottom:1px solid rgba(255,92,31,.2);display:grid;gap:16px;align-content:start}
+.svc article:nth-child(even){padding-left:clamp(20px,3vw,44px);border-left:1px solid rgba(255,92,31,.2)}
+.svc .tag{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-soft)}
+@media (max-width:760px){.svc{grid-template-columns:1fr}.svc article:nth-child(even){padding-left:0;border-left:0}}
+
+/* method */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,40px);counter-reset:s}
+.steps div{display:grid;gap:14px;align-content:start;padding-top:24px;border-top:1px solid var(--gold-soft)}
+.steps div::before{counter-increment:s;content:"0" counter(s);font-family:var(--display);color:var(--gold);font-size:44px;line-height:1}
+.steps p{font-size:15px}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+/* transformations */
+.tf{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px)}
+.tf figure{margin:0;display:grid;gap:14px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.pair .ph{aspect-ratio:3/4;padding:12px}
+.pair .ph::after{inset:8px}
+.tf figcaption{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--mute);letter-spacing:.06em}
+.tf figcaption b{color:var(--cream);font-weight:400}
+@media (max-width:860px){.tf{grid-template-columns:1fr}}
+
+/* testimonials */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px)}
+.quotes blockquote{margin:0;display:grid;gap:22px;align-content:space-between}
+.quotes q{font-family:var(--body);font-style:italic;font-weight:500;font-size:clamp(19px,1.7vw,22px);line-height:1.45;color:var(--cream);quotes:"„" "“"}
+.quotes q::before{color:var(--gold)}
+.quotes cite{font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft)}
+.note{margin-top:40px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft)}
+@media (max-width:860px){.quotes{grid-template-columns:1fr}}
+
+/* pricing */
+.prices{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,92,31,.2);border:1px solid rgba(255,92,31,.2)}
+.plan{background:var(--ink);padding:38px 28px;display:grid;gap:20px;align-content:start;grid-template-rows:auto auto auto 1fr auto}
+.plan.feat{background:var(--ink-2)}
+.plan .tag{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.plan h3{font-size:26px}
+.amt{font-family:var(--display);font-size:56px;line-height:1;color:var(--cream);font-variant-numeric:lining-nums}
+.amt sup{font-size:22px;color:var(--gold);vertical-align:top;margin-right:4px}
+.amt small{font-family:var(--body);font-size:13px;color:var(--mute);letter-spacing:.08em;margin-left:6px}
+.plan ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:15px;color:var(--mute)}
+.plan li{padding-left:22px;position:relative}
+.plan li::before{content:"";position:absolute;left:0;top:.8em;width:10px;height:1px;background:var(--gold)}
+.plan .btn{justify-content:center;padding:15px 18px;font-size:12px}
+@media (max-width:1020px){.prices{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.prices{grid-template-columns:1fr}}
+
+/* faq */
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,6vw,96px)}
+details{border-bottom:1px solid rgba(255,92,31,.2)}
+details:first-child{border-top:1px solid rgba(255,92,31,.2)}
+summary{list-style:none;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;gap:24px;font-family:var(--cond);font-weight:600;font-size:clamp(20px,1.9vw,24px);color:var(--cream)}
+summary::-webkit-details-marker{display:none}
+summary>span{min-width:0;flex:1}
+.faq .wrap>*{min-width:0}
+summary::after{content:"+";flex:none;width:28px;text-align:center;color:var(--gold);font-family:var(--body);font-weight:300;font-size:26px;line-height:1;transition:transform .3s}
+details[open] summary::after{content:"−"}
+details p{padding-bottom:26px;font-size:16px}
+@media (max-width:860px){.faq .wrap{grid-template-columns:1fr}}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px)}
+.contact .wrap>*,.row>*,label{min-width:0}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+.channels{display:grid;margin-top:44px;border-top:1px solid rgba(255,92,31,.2)}
+.ch{display:grid;grid-template-columns:120px 1fr auto;gap:16px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(255,92,31,.2)}
+.ch span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-soft)}
+.ch strong{font-weight:400;color:var(--cream);user-select:all;min-width:0;overflow-wrap:anywhere}
+.ch a,.ch button{background:none;border:0;color:var(--gold);font:400 11px var(--body);letter-spacing:.2em;text-transform:uppercase;cursor:pointer;text-decoration:none;white-space:nowrap}
+@media (max-width:480px){.ch{grid-template-columns:1fr auto}.ch span{grid-column:1/-1}}
+form{display:grid;gap:22px;background:var(--ink-2);border:1px solid rgba(255,92,31,.2);padding:clamp(24px,4vw,48px)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media (max-width:560px){.row{grid-template-columns:1fr}}
+label{display:grid;gap:8px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-soft)}
+input,select,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--gold-soft);color:var(--cream);font:400 16px var(--body);padding:10px 0;border-radius:0}
+select option{background:var(--ink-2)}
+textarea{resize:vertical;min-height:96px}
+input:focus,select:focus,textarea:focus{outline:0;border-bottom-color:var(--gold)}
+.ok{display:grid;gap:16px;padding:20px;border:1px solid var(--gold-soft)}
+.ok p{color:var(--cream)}
+
+footer{border-top:1px solid rgba(255,92,31,.14);padding-block:40px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+</style>
+<style>html,body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<div class="site" id="site" data-lang="sr">
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top">Marko <span>Pavlović</span></a>
+    <div class="links">
+      <a href="#o-meni"><span lang="sr">O meni</span><span lang="en">About</span></a>
+      <a href="#usluge"><span lang="sr">Usluge</span><span lang="en">Services</span></a>
+      <a href="#rezultati"><span lang="sr">Rezultati</span><span lang="en">Results</span></a>
+      <a href="#cene"><span lang="sr">Cene</span><span lang="en">Pricing</span></a>
+      <a href="#kontakt"><span lang="sr">Kontakt</span><span lang="en">Contact</span></a>
+    </div>
+    <div class="navr">
+      <div class="lang" role="group" aria-label="Jezik / Language">
+        <button type="button" id="l-sr" data-setlang="sr" aria-pressed="true">SR</button>
+        <button type="button" id="l-en" data-setlang="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="mmenu" aria-label="Meni"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</nav>
+<div class="mmenu" id="mmenu" hidden>
+  <a href="#o-meni"><span lang="sr">O meni</span><span lang="en">About</span></a>
+  <a href="#usluge"><span lang="sr">Usluge</span><span lang="en">Services</span></a>
+  <a href="#rezultati"><span lang="sr">Rezultati</span><span lang="en">Results</span></a>
+  <a href="#cene"><span lang="sr">Cene</span><span lang="en">Pricing</span></a>
+  <a href="#kontakt"><span lang="sr">Kontakt</span><span lang="en">Contact</span></a>
+  <a class="btn" href="#kontakt"><span lang="sr">Zakažite konsultacije</span><span lang="en">Book a consultation</span></a>
+  <div class="mfoot">
+    <div class="mlang" role="group" aria-label="Jezik / Language">
+      <button type="button" id="m-sr" data-setlang="sr" aria-pressed="true">Srpski</button>
+      <button type="button" id="m-en" data-setlang="en" aria-pressed="false">English</button>
+    </div>
+    <div>+381 60 000 0000 · @markopavlovic.coach</div>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow fade"><span lang="sr">Personalni trener · Ćuprija</span><span lang="en">Personal trainer · Ćuprija, Serbia</span></div>
+      <h1 class="fade d2"><span lang="sr">Telo koje<span class="l2"><em>traje.</em></span></span><span lang="en">A body built<span class="l2"><em>to last.</em></span></span></h1>
+      <p class="fade d3"><span lang="sr">Petnaest godina rada sa ljudima koji žele više od prolaznog rezultata. Trening, ishrana i navike, sastavljeni po meri jedne osobe: vas.</span><span lang="en">Fifteen years of working with people who want more than a passing result. Training, nutrition and habits, designed around one person: you.</span></p>
+      <div class="cta fade d3">
+        <a class="btn" href="#kontakt"><span lang="sr">Zakažite konsultacije</span><span lang="en">Book a consultation</span></a>
+        <a class="btn ghost" href="#cene"><span lang="sr">Paketi i cene</span><span lang="en">Packages</span></a>
+      </div>
+      <div class="sig">
+        <div><b>15</b> <span lang="sr">godina iskustva</span><span lang="en">years of experience</span></div>
+        <div><b>1:1</b> <span lang="sr">pristup</span><span lang="en">approach</span></div>
+        <div><b>SR / EN</b></div>
+      </div>
+    </div>
+    <div class="ph fade d2" role="img" aria-label="Mesto za portret Marka Pavlovića"><small><span lang="sr">Portret · zameniti fotografijom</span><span lang="en">Portrait · replace with photo</span></small></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="figs">
+    <div class="fig"><strong>15</strong><span lang="sr">godina u treningu</span><span lang="en">years coaching</span></div>
+    <div class="fig"><strong>500+</strong><span lang="sr">klijenata</span><span lang="en">clients</span></div>
+    <div class="fig"><strong>12</strong><span lang="sr">nedelja do promene</span><span lang="en">weeks to change</span></div>
+    <div class="fig"><strong>4</strong><span lang="sr">programa</span><span lang="en">programmes</span></div>
+  </div>
+</div>
+
+<section class="about" id="o-meni">
+  <div class="wrap">
+    <div class="ph" role="img" aria-label="Mesto za fotografiju sa treninga"><small><span lang="sr">Fotografija sa treninga</span><span lang="en">Training photo</span></small></div>
+    <div class="txt">
+      <div class="eyebrow"><span lang="sr">O meni</span><span lang="en">About</span></div>
+      <h2><span lang="sr">Disciplina je <em>najlepši</em> luksuz.</span><span lang="en">Discipline is the <em>finest</em> luxury.</span></h2>
+      <p class="lead"><span lang="sr">Ja sam Marko Pavlović. Od 2011. godine pomažem ljudima da izgrade snagu, formu i samopouzdanje koje se vidi i van teretane.</span><span lang="en">I'm Marko Pavlović. Since 2011 I've helped people build strength, shape and a confidence that shows outside the gym.</span></p>
+      <p><span lang="sr">Radim sa početnicima, rekreativcima i sportistima, sa ljudima posle povreda i sa onima kojima je potreban neko ko će ih voditi bez kompromisa. Svaki program počinje razgovorom i merenjem, a završava se rezultatom koji možete da zadržite.</span><span lang="en">I work with beginners, recreational athletes and competitors, with people recovering from injury and with anyone who needs uncompromising guidance. Every programme starts with a conversation and an assessment, and ends with a result you can keep.</span></p>
+      <ul class="certs">
+        <li><i>2011</i><span lang="sr">Licencirani personalni trener</span><span lang="en">Licensed personal trainer</span></li>
+        <li><i>2014</i><span lang="sr">Sertifikat iz sportske ishrane</span><span lang="en">Sports nutrition certificate</span></li>
+        <li><i>2017</i><span lang="sr">Funkcionalni trening i mobilnost</span><span lang="en">Functional training &amp; mobility</span></li>
+        <li><i>2020</i><span lang="sr">Snaga i kondicija za sportiste</span><span lang="en">Strength &amp; conditioning for athletes</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="usluge">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><span lang="sr">Usluge</span><span lang="en">Services</span></div>
+      <h2><span lang="sr">Četiri puta do <em>iste forme.</em></span><span lang="en">Four paths to <em>one standard.</em></span></h2>
+    </div>
+    <div class="svc">
+      <article>
+        <span class="tag"><span lang="sr">U teretani</span><span lang="en">In person</span></span>
+        <h3><span lang="sr">Personalni treninzi</span><span lang="en">Personal training</span></h3>
+        <p><span lang="sr">Rad jedan na jedan, uz punu pažnju na tehniku, tempo i opterećenje. Svaki trening se beleži i planira na osnovu prethodnog.</span><span lang="en">One-to-one sessions with full attention on technique, tempo and load. Every session is logged and planned from the last.</span></p>
+      </article>
+      <article>
+        <span class="tag"><span lang="sr">Bilo gde</span><span lang="en">Anywhere</span></span>
+        <h3><span lang="sr">Online coaching</span><span lang="en">Online coaching</span></h3>
+        <p><span lang="sr">Program u aplikaciji, video analiza tehnike i nedeljni izveštaj. Za vas koji putujete ili trenirate u svojoj teretani.</span><span lang="en">A programme in the app, video technique reviews and a weekly check-in. For those who travel or train at their own gym.</span></p>
+      </article>
+      <article>
+        <span class="tag"><span lang="sr">Ishrana</span><span lang="en">Nutrition</span></span>
+        <h3><span lang="sr">Plan ishrane</span><span lang="en">Nutrition plan</span></h3>
+        <p><span lang="sr">Jelovnik prema vašem cilju, rasporedu i ukusu. Bez gladovanja i bez zabranjenih namirnica, sa jasnim količinama.</span><span lang="en">A meal plan built around your goal, schedule and taste. No starving, no banned foods, clear portions.</span></p>
+      </article>
+      <article>
+        <span class="tag"><span lang="sr">12 nedelja</span><span lang="en">12 weeks</span></span>
+        <h3><span lang="sr">Transformacioni program</span><span lang="en">Transformation programme</span></h3>
+        <p><span lang="sr">Trening, ishrana i praćenje u jednom paketu. Merenja na početku, svake četvrte nedelje i na kraju.</span><span lang="en">Training, nutrition and accountability in one package. Measurements at the start, every fourth week and at the end.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><span lang="sr">Kako radimo</span><span lang="en">The method</span></div>
+      <h2><span lang="sr">Od prvog razgovora <em>do rezultata.</em></span><span lang="en">From first conversation <em>to result.</em></span></h2>
+    </div>
+    <div class="steps">
+      <div><h3><span lang="sr">Konsultacije</span><span lang="en">Consultation</span></h3><p><span lang="sr">Razgovaramo o cilju, iskustvu, zdravlju i vremenu kojim raspolažete.</span><span lang="en">We discuss your goal, experience, health and available time.</span></p></div>
+      <div><h3><span lang="sr">Procena</span><span lang="en">Assessment</span></h3><p><span lang="sr">Merenje obima, telesne kompozicije, mobilnosti i početne snage.</span><span lang="en">Measurements, body composition, mobility and baseline strength.</span></p></div>
+      <div><h3><span lang="sr">Program</span><span lang="en">Programme</span></h3><p><span lang="sr">Trening i ishrana napisani samo za vas, sa jasnim fazama.</span><span lang="en">Training and nutrition written for you alone, in clear phases.</span></p></div>
+      <div><h3><span lang="sr">Praćenje</span><span lang="en">Follow-up</span></h3><p><span lang="sr">Redovne korekcije dok rezultat ne postane navika.</span><span lang="en">Regular adjustments until the result becomes habit.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="rezultati">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><span lang="sr">Transformacije</span><span lang="en">Transformations</span></div>
+      <h2><span lang="sr">Rezultati <em>govore tiho.</em></span><span lang="en">Results <em>speak quietly.</em></span></h2>
+    </div>
+    <div class="tf">
+      <figure>
+        <div class="pair"><div class="ph"><small><span lang="sr">Pre</span><span lang="en">Before</span></small></div><div class="ph"><small><span lang="sr">Posle</span><span lang="en">After</span></small></div></div>
+        <figcaption><b>Klijent A.</b><span>−14 kg · 16 <span lang="sr">ned.</span><span lang="en">wks</span></span></figcaption>
+      </figure>
+      <figure>
+        <div class="pair"><div class="ph"><small><span lang="sr">Pre</span><span lang="en">Before</span></small></div><div class="ph"><small><span lang="sr">Posle</span><span lang="en">After</span></small></div></div>
+        <figcaption><b>Klijentkinja J.</b><span>−9 kg · 12 <span lang="sr">ned.</span><span lang="en">wks</span></span></figcaption>
+      </figure>
+      <figure>
+        <div class="pair"><div class="ph"><small><span lang="sr">Pre</span><span lang="en">Before</span></small></div><div class="ph"><small><span lang="sr">Posle</span><span lang="en">After</span></small></div></div>
+        <figcaption><b>Klijent M.</b><span>+6 kg <span lang="sr">mišića</span><span lang="en">muscle</span> · 24 <span lang="sr">ned.</span><span lang="en">wks</span></span></figcaption>
+      </figure>
+    </div>
+    <p class="note"><span lang="sr">Primeri: zameniti stvarnim fotografijama i podacima klijenata, uz njihovu saglasnost.</span><span lang="en">Examples: replace with real client photos and data, with their consent.</span></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><span lang="sr">Utisci</span><span lang="en">Testimonials</span></div>
+      <h2><span lang="sr">Reč <em>klijenata.</em></span><span lang="en">In their <em>words.</em></span></h2>
+    </div>
+    <div class="quotes">
+      <blockquote><q><span lang="sr">Prvi put posle deset godina treniram bez bolova u leđima. Marko zna tačno kada da pritisne, a kada da uspori.</span><span lang="en">For the first time in ten years I train without back pain. Marko knows exactly when to push and when to ease off.</span></q><cite>Ime klijenta · <span lang="sr">primer</span><span lang="en">example</span></cite></blockquote>
+      <blockquote><q><span lang="sr">Online program mi je sačuvao formu tokom godine stalnih putovanja. Nedeljni izveštaji su me držali odgovornom.</span><span lang="en">The online programme kept me in shape through a year of constant travel. The weekly check-ins kept me accountable.</span></q><cite>Ime klijenta · <span lang="sr">primer</span><span lang="en">example</span></cite></blockquote>
+      <blockquote><q><span lang="sr">Za dvanaest nedelja promenio sam i telo i način na koji jedem. Najbolja investicija koju sam napravio.</span><span lang="en">In twelve weeks I changed both my body and how I eat. The best investment I've made.</span></q><cite>Ime klijenta · <span lang="sr">primer</span><span lang="en">example</span></cite></blockquote>
+    </div>
+    <p class="note"><span lang="sr">Primeri utisaka: zameniti pravim izjavama klijenata.</span><span lang="en">Sample testimonials: replace with real client quotes.</span></p>
+  </div>
+</section>
+
+<section id="cene">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><span lang="sr">Paketi</span><span lang="en">Packages</span></div>
+      <h2><span lang="sr">Izaberite <em>svoj tempo.</em></span><span lang="en">Choose <em>your pace.</em></span></h2>
+    </div>
+    <div class="prices">
+      <div class="plan">
+        <span class="tag"><span lang="sr">Uživo</span><span lang="en">In person</span></span>
+        <h3><span lang="sr">Personalni trening</span><span lang="en">Personal training</span></h3>
+        <div class="amt"><sup>€</sup>260<small><span lang="sr">/ 12 treninga</span><span lang="en">/ 12 sessions</span></small></div>
+        <ul>
+          <li><span lang="sr">Pojedinačni trening 25 €</span><span lang="en">Single session €25</span></li>
+          <li><span lang="sr">Početna procena i merenje</span><span lang="en">Initial assessment</span></li>
+          <li><span lang="sr">Dnevnik napretka</span><span lang="en">Progress log</span></li>
+        </ul>
+        <a class="btn ghost" href="#kontakt" data-plan="trening"><span lang="sr">Rezerviši</span><span lang="en">Reserve</span></a>
+      </div>
+      <div class="plan">
+        <span class="tag"><span lang="sr">Mesečno</span><span lang="en">Monthly</span></span>
+        <h3>Online coaching</h3>
+        <div class="amt"><sup>€</sup>70<small><span lang="sr">/ mesec</span><span lang="en">/ month</span></small></div>
+        <ul>
+          <li><span lang="sr">Program u aplikaciji</span><span lang="en">Programme in the app</span></li>
+          <li><span lang="sr">Video analiza tehnike</span><span lang="en">Video technique review</span></li>
+          <li><span lang="sr">Nedeljni izveštaj</span><span lang="en">Weekly check-in</span></li>
+        </ul>
+        <a class="btn ghost" href="#kontakt" data-plan="online"><span lang="sr">Rezerviši</span><span lang="en">Reserve</span></a>
+      </div>
+      <div class="plan">
+        <span class="tag"><span lang="sr">Jednokratno</span><span lang="en">One-off</span></span>
+        <h3><span lang="sr">Plan ishrane</span><span lang="en">Nutrition plan</span></h3>
+        <div class="amt"><sup>€</sup>45</div>
+        <ul>
+          <li><span lang="sr">Jelovnik za 4 nedelje</span><span lang="en">4-week meal plan</span></li>
+          <li><span lang="sr">Lista namirnica</span><span lang="en">Shopping list</span></li>
+          <li><span lang="sr">Jedna korekcija</span><span lang="en">One revision</span></li>
+        </ul>
+        <a class="btn ghost" href="#kontakt" data-plan="ishrana"><span lang="sr">Rezerviši</span><span lang="en">Reserve</span></a>
+      </div>
+      <div class="plan feat">
+        <span class="tag"><span lang="sr">Najtraženije</span><span lang="en">Most chosen</span></span>
+        <h3><span lang="sr">Transformacija</span><span lang="en">Transformation</span></h3>
+        <div class="amt"><sup>€</sup>490<small><span lang="sr">/ 12 nedelja</span><span lang="en">/ 12 weeks</span></small></div>
+        <ul>
+          <li><span lang="sr">24 personalna treninga</span><span lang="en">24 personal sessions</span></li>
+          <li><span lang="sr">Plan ishrane sa korekcijama</span><span lang="en">Nutrition plan with revisions</span></li>
+          <li><span lang="sr">Merenja svake 4. nedelje</span><span lang="en">Measurements every 4 weeks</span></li>
+          <li><span lang="sr">Podrška porukama</span><span lang="en">Message support</span></li>
+        </ul>
+        <a class="btn" href="#kontakt" data-plan="transformacija"><span lang="sr">Rezerviši</span><span lang="en">Reserve</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">FAQ</div>
+      <h2><span lang="sr">Česta <em>pitanja.</em></span><span lang="en">Common <em>questions.</em></span></h2>
+    </div>
+    <div>
+      <details open><summary><span lang="sr">Da li je program pogodan za početnike?</span><span lang="en">Is it suitable for beginners?</span></summary><p><span lang="sr">Da. Opterećenje i tempo prilagođavam vašem nivou, a prve nedelje posvećujemo tehnici.</span><span lang="en">Yes. Load and pace match your level, and the first weeks focus on technique.</span></p></details>
+      <details><summary><span lang="sr">Gde se održavaju treninzi uživo?</span><span lang="en">Where do in-person sessions take place?</span></summary><p><span lang="sr">U Ćupriji, u teretani sa kojom sarađujem. Tačnu adresu dobijate pri zakazivanju.</span><span lang="en">In Ćuprija, at a partner gym. You receive the exact address when booking.</span></p></details>
+      <details><summary><span lang="sr">Kako funkcioniše online coaching?</span><span lang="en">How does online coaching work?</span></summary><p><span lang="sr">Program dobijate u aplikaciji, šaljete mi snimke vežbi, a jednom nedeljno prolazimo kroz napredak i menjamo plan po potrebi.</span><span lang="en">You get the programme in an app, send me exercise videos, and once a week we review progress and adjust the plan.</span></p></details>
+      <details><summary><span lang="sr">Da li moram da se odreknem omiljene hrane?</span><span lang="en">Do I have to give up foods I love?</span></summary><p><span lang="sr">Ne. Plan ishrane gradim oko vaših navika, sa količinama koje vas vode ka cilju.</span><span lang="en">No. The plan is built around your habits, with portions that move you toward your goal.</span></p></details>
+      <details><summary><span lang="sr">Kako se plaća?</span><span lang="en">How do I pay?</span></summary><p><span lang="sr">Gotovinom ili uplatom na račun, unapred za paket ili mesec.</span><span lang="en">Cash or bank transfer, in advance for the package or month.</span></p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow"><span lang="sr">Kontakt</span><span lang="en">Contact</span></div>
+      <h2 style="margin-top:22px"><span lang="sr">Prvi korak je <em>razgovor.</em></span><span lang="en">The first step is <em>a conversation.</em></span></h2>
+      <p style="margin-top:22px"><span lang="sr">Pišite ili pozovite. Odgovaram u roku od 24 sata.</span><span lang="en">Write or call. I reply within 24 hours.</span></p>
+      <div class="channels">
+        <div class="ch"><span lang="sr">Telefon</span><span lang="en">Phone</span><strong id="v-tel">+381 60 000 0000</strong><button type="button" data-copy="v-tel"><span lang="sr">Kopiraj</span><span lang="en">Copy</span></button></div>
+        <div class="ch"><span>Email</span><strong id="v-mail">kontakt@markopavlovic.rs</strong><button type="button" data-copy="v-mail"><span lang="sr">Kopiraj</span><span lang="en">Copy</span></button></div>
+        <div class="ch"><span>WhatsApp / Viber</span><strong>+381 60 000 0000</strong><a href="https://wa.me/381600000000" target="_blank" rel="noopener">WhatsApp ↗</a></div>
+        <div class="ch"><span>Instagram</span><strong>@markopavlovic.coach</strong><a href="https://instagram.com/markopavlovic.coach" target="_blank" rel="noopener"><span lang="sr">Profil</span><span lang="en">Profile</span> ↗</a></div>
+      </div>
+    </div>
+    <form id="form" novalidate>
+      <div class="row">
+        <label for="f-name"><span lang="sr">Ime i prezime</span><span lang="en">Full name</span><input id="f-name" name="name" required autocomplete="name"></label>
+        <label for="f-phone"><span lang="sr">Telefon</span><span lang="en">Phone</span><input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
+      </div>
+      <label for="f-plan"><span lang="sr">Zanima me</span><span lang="en">I'm interested in</span>
+        <select id="f-plan" name="plan">
+          <option value="transformacija">Transformacija · 12 nedelja</option>
+          <option value="trening">Personalni trening</option>
+          <option value="online">Online coaching</option>
+          <option value="ishrana">Plan ishrane</option>
+        </select>
+      </label>
+      <label for="f-msg"><span lang="sr">Vaš cilj</span><span lang="en">Your goal</span><textarea id="f-msg" name="msg" placeholder=""></textarea></label>
+      <button class="btn" type="submit"><span lang="sr">Pošalji upit</span><span lang="en">Send enquiry</span></button>
+      <div class="ok" id="ok" hidden>
+        <p><span lang="sr">Upit je spreman. Pošaljite ga jednim klikom putem WhatsApp-a:</span><span lang="en">Your enquiry is ready. Send it with one tap on WhatsApp:</span></p>
+        <a class="btn ghost" id="wa" href="https://wa.me/381600000000" target="_blank" rel="noopener"><span lang="sr">Otvori WhatsApp</span><span lang="en">Open WhatsApp</span> ↗</a>
+      </div>
+      <p id="err" hidden style="color:var(--gold)"><span lang="sr">Unesite ime da bismo znali kome odgovaramo.</span><span lang="en">Enter your name so we know who to reply to.</span></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Marko Pavlović</span>
+    <span lang="sr">Personalni trener · Ćuprija</span><span lang="en">Personal trainer · Ćuprija</span>
+  </div>
+</footer>
+</div>
+
+<script>
+(function(){
+  var site=document.getElementById('site'),lb=document.querySelectorAll('[data-setlang]');
+  function setLang(l){site.dataset.lang=l;document.documentElement.lang=l;lb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.setlang===l)});
+    document.getElementById('f-msg').placeholder=l==='sr'?'Npr. želim da skinem 10 kg do leta':'E.g. I want to lose 10 kg by summer';
+    try{localStorage.setItem('mp-lang',l)}catch(e){}}
+  lb.forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.setlang)})});
+  var saved='sr';try{saved=localStorage.getItem('mp-lang')||'sr'}catch(e){}
+  setLang(saved);
+
+  var bg=document.getElementById('burger'),mm=document.getElementById('mmenu');
+  function menu(open){mm.hidden=!open;bg.setAttribute('aria-expanded',open);document.body.classList.toggle('menu-open',open)}
+  bg.addEventListener('click',function(){menu(mm.hidden)});
+  mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!mm.hidden){menu(false);bg.focus()}});
+  window.addEventListener('resize',function(){if(innerWidth>760&&!mm.hidden)menu(false)});
+  document.querySelectorAll('[data-plan]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('f-plan').value=a.dataset.plan})});
+
+  document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){
+    var el=document.getElementById(b.dataset.copy),t=el.textContent,orig=b.innerHTML,done=function(){b.textContent='✓';setTimeout(function(){b.innerHTML=orig},1400)};
+    var sel=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)};
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,sel)}else sel();
+  })});
+
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();var f=e.target,n=f.name.value.trim();
+    document.getElementById('err').hidden=!!n;if(!n){f.name.focus();return}
+    var plan=f.plan.options[f.plan.selectedIndex].text;
+    var txt='Zdravo Marko, ja sam '+n+(f.phone.value?' ('+f.phone.value+')':'')+'. Zanima me: '+plan+'.'+(f.msg.value?' Cilj: '+f.msg.value:'');
+    document.getElementById('wa').href='https://wa.me/381600000000?text='+encodeURIComponent(txt);
+    document.getElementById('ok').hidden=false;
+  });
+})();
+</script>
+</body>
+</html>
